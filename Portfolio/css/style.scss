@@ -1,0 +1,482 @@
+$box-shadow: 1px 1px 50px rgba(166, 166, 166, 0.3);
+$box-shadow-hover: 1px 1px 50px rgba(100, 100, 100, 0.4);
+$thepurple: #6C63FF;
+$max-width: 1024px;
+
+@import "responsive";
+
+// Mixin: Box Shadow
+@mixin box-shadow($prop) {
+  box-shadow: $prop;
+  -o-box-shadow: $prop;
+  -ms-box-shadow: $prop;
+  -moz-box-shadow: $prop;
+  -webkit-box-shadow: $prop;
+}
+@mixin transition($seconds) {
+	transition: $seconds;
+	-o-transition: $seconds;
+	-moz-transition: $seconds;
+	-webkit-transition: $seconds;
+ }
+
+// Every Element
+* {
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
+	-ms-appearance: none !important;
+	-o-appearance: none !important;
+	appearance: none !important;
+	outline: none !important;
+	box-sizing: border-box;
+	@include transition(0.4s);
+}
+// Every Link
+a {
+	text-decoration: none !important;
+	&:hover {
+		text-decoration: none !important;
+	}
+	&:visited {
+		text-decoration: none !important;
+	}
+}
+// Every li tag
+li {
+  	list-style-type: none;
+}
+
+// Every divider element
+hr {
+	display: block;
+	width: 50%;
+	height: 1px;
+	border: 0;
+	border-top: .5px solid rgba(107, 99, 255, 0.3);
+	margin: 3em auto;
+	padding: 0;
+}
+
+body {
+	margin: 0; padding: 0;
+	font-family: 'DM Serif Text', serif;
+}
+
+// Main Elements
+.main-elements {
+	width: 100% !important;
+	display: block;
+	margin: 0;
+	text-align: center;
+}
+
+// HEADER
+.header {
+	background-color: $thepurple;
+	color: #ffffff;
+	height: 50px;
+	padding: 10px;
+	.header-container {
+		max-width: $max-width;
+		height: 100%;
+		margin: auto;
+		.logo {
+			width: 30px; height: 30px;
+			border-radius: 20px;
+			float: left;
+			background-color: #fff;
+			color: $thepurple;
+		}
+		.contact {
+			width: 100px; height: 30px;
+			border-radius: 15px;
+			float: right;
+			line-height: 30px;
+			background-color: #fff;
+			color: $thepurple;
+		}
+	}
+}
+
+// BODY
+.body {
+	max-width: $max-width;
+	background-color: #ffffff;
+	color: $thepurple;
+	margin: 0 auto;
+	display: block;
+	.section {
+		h2 {
+			margin-bottom: 50px;
+		}
+	}
+	.scroll-down {
+		width: 35px; height: 35px;
+		border-radius: 18px;
+		color: $thepurple;
+		display:flex;
+		justify-content: center;
+		align-items:center;
+		margin: 2em auto;
+		@include box-shadow(1px 1px 5px rgba(141, 141, 141, 0.5));
+	}
+	// Introduction
+	.section-one {
+		width: 100%;
+		height: 300px;
+		display:flex;
+		justify-content: flex-start;
+		align-items:center;
+		.sides {
+			width: 50%;
+			height: 100%;
+			float: left;
+			background-color: #fff;
+		}
+		.illustration {
+			display:flex;
+			justify-content: flex-end;
+			align-items:center;
+			padding-right: 75px;
+			img {
+				width: 150px; height: 150px;
+			}
+		}
+		.introduction {
+			display:flex;
+			justify-content: flex-start;
+			align-items:center;
+			text-align: left;
+			padding-left: 75px;
+			h2 {
+				font-weight: bolder; 
+				margin: 0;
+			}
+			h3 {
+				font-weight: bold;
+			}
+		}
+	}
+	// Specializations
+	.section-two {
+		.thumbnails {
+			display:flex;
+			justify-content: space-around;
+			align-items: center;
+			.thumbnail {
+				width: 250px; height: 250px;
+				text-align: center;
+				color: $thepurple;
+				img {
+					width: 225px; height: 200px;
+				}
+			}
+		}
+	}
+	// Skills
+	.section-three {
+		.skill {
+			width: 80%;
+			text-align: left;
+			margin: auto;
+			.progress-bar {
+				height: 20px;
+				border: 2px solid $thepurple;
+				border-radius: 10px;
+				.progress {
+					width: 50%; height: 100%;
+					background-color: $thepurple;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+	// Education 
+	.section-four {
+		.schools {
+			display:flex;
+			justify-content: space-around;
+			align-items: center;
+			.education {
+				width: 350px;
+				height: 150px;
+				border-radius: 10px;
+				display:flex;
+				justify-content: space-around;
+				align-items: center;
+				@include box-shadow(1px 1px 5px rgba(141, 141, 141, 0.35));
+				.school-icon {
+					width: 150px;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					img {
+						width: 60%; height: 60%;
+					}
+				}
+				.school-info {
+					width: 250px;
+					height: 150px;
+					text-align: left;
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					> * {
+						display: flex;
+						justify-content: center;
+						flex-direction: column;
+					}	
+					.name {
+						width: 100%;
+						height: 40%;
+					}
+					.years {
+						width: 100%;
+						height: 40%;
+					}
+				}
+			}
+		}
+	}
+	// Projects Section 
+	.section-five {
+		.projects {
+			display:flex;
+			justify-content: space-around;
+			align-items: center;
+			margin-bottom: 40px;
+			.project {
+				width: 350px;
+				height: 150px;
+				border-radius: 10px;
+				display:flex;
+				justify-content: space-around;
+				align-items: center;
+				@include box-shadow(1px 1px 5px rgba(141, 141, 141, 0.35));
+				.project-icon {
+					width: 150px;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					img {
+						width: 50%; height: 50%;
+					}
+				}
+				.project-info {
+					width: 250px;
+					height: 150px;
+					text-align: left;
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					> * {
+						display: flex;
+						justify-content: center;
+						flex-direction: column;
+						color: $thepurple;
+					}	
+					.name {
+						width: 100%;
+						height: 40%;
+					}
+					.description {
+						width: 100%;
+						height: 40%;
+					}
+				}
+			}
+		}
+	}
+	// Contact Me 
+	.section-six {
+		min-width: 400px;
+		max-width: 50%;
+		height: 150px;
+		background-color: $thepurple;
+		color: #fff;
+		border-radius: 10px;
+		margin: 0 auto 35px auto;
+		display:flex;
+		justify-content: space-around;
+		align-items: center;
+		@include box-shadow(1px 1px 5px rgba(141, 141, 141, 0.35));
+		a {
+			width: 120px; height: 30px;
+			border-radius: 15px;
+			float: right;
+			line-height: 30px;
+			background-color: #fff;
+			color: $thepurple;
+			@include box-shadow(1px 1px 5px rgba(141, 141, 141, 0.35));
+		}
+	}
+}
+
+// FOOTER
+.footer {
+  	height: 150px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: $thepurple;
+	color: #ffffff;
+	padding-top: 15px;
+	margin-bottom: 0px;
+	font-size: 13px;
+	.social {
+		.social-icons {
+			color: #fff;
+			margin: 0 10px;
+		}
+	}
+}
+
+// CSS Below This Is Responsible for
+// Smaller Screen Versions of the Site
+
+// For Screens Smaller Than 920px Wide
+@media only screen and (max-width: 920px) {
+   // BODY
+   .body {
+      // Specializations
+      .section-two {
+         .thumbnails {
+            .thumbnail {
+               width: 150px; height: auto;
+               img {
+                  width: 150px; height: 150px;
+               }
+            }
+         }
+		}
+   }
+}
+
+// For Screens Smaller Than 768px Wide
+@media only screen and (max-width: 768px) {
+	hr {
+		width: 75%;
+	}
+   // BODY
+   .body {
+		// Introduction
+		.section-one {
+			.sides {
+				display:flex;
+				justify-content: center;
+				align-items:center;
+				padding: 0;
+			}
+		}
+      // Specializations
+      .section-two {
+         .thumbnails {
+				display:flex;
+				flex-direction: column;
+            .thumbnail {
+					width: 100%; height: auto;
+					margin: 0 auto 30px auto;
+               img {
+                  width: 40%; height: auto;
+               }
+            }
+         }
+      }
+		// Education 
+		.section-four {
+			.schools {
+				display:flex;
+				flex-direction: column;
+				.education {
+					width: 75%;
+					min-width: 400px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+		// Projects Section 
+		.section-five {
+			.projects {
+				display:flex;
+				flex-direction: column;
+				margin-bottom: 0px;
+				.project {
+					width: 75%;
+					min-width: 400px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+		// Contact Me 
+		.section-six {
+			max-width: 75% !important;
+		}
+   }
+}
+
+// For Screens Smaller Than 575px Wide
+@media only screen and (max-width: 575px) {
+	// BODY
+	.body {
+		// Introduction
+		.section-one {
+			width: 100%;
+			height: auto;
+			display:flex;
+			flex-direction: column;
+			.sides {
+				width: 100%;
+			}
+			.illustration {
+				display:flex;
+				justify-content: center;
+				align-items:center;
+				padding: 25px 0 10px 0;
+				img {
+					width: 100px; height: 100px;
+				}
+			}
+			.introduction {
+				background-color: #fff;
+				display:flex;
+				justify-content: center;
+				align-items:center;
+				text-align: center;
+				padding: 25px 0 10px 0;				
+				h2 { margin: 0;}
+				h3 { margin: 0;}
+			}
+		}
+	}
+}
+
+// For Screens Smaller Than 405px Wide
+@media only screen and (max-width: 415px) {
+	// BODY
+	.body {
+		// Education 
+		.section-four {
+			.schools {
+				.education {
+					min-width: 90%;
+				}
+			}
+		}
+		// Projects Section 
+		.section-five {
+			.projects {
+				.project {
+					min-width: 90%;
+				}
+			}
+		}
+		// Contact Me 
+		.section-six {
+			min-width: 90%;
+			max-width: 90%;
+		}
+	}	
+}
