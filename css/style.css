@@ -1,61 +1,365 @@
-/*
-Error: File to import not found or unreadable: responsive.
-        on line 6 of style.scss
+* {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  -ms-appearance: none !important;
+  -o-appearance: none !important;
+  appearance: none !important;
+  outline: none !important;
+  box-sizing: border-box;
+  transition: 0.4s;
+  -o-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -webkit-transition: 0.4s; }
 
-1: $box-shadow: 1px 1px 50px rgba(166, 166, 166, 0.3);
-2: $box-shadow-hover: 1px 1px 50px rgba(100, 100, 100, 0.4);
-3: $thepurple: #6C63FF;
-4: $max-width: 1024px;
-5: 
-6: @import "responsive";
-7: 
-8: // Mixin: Box Shadow
-9: @mixin box-shadow($prop) {
-10:   box-shadow: $prop;
-11:   -o-box-shadow: $prop;
+a {
+  text-decoration: none !important; }
+  a:hover {
+    text-decoration: none !important; }
+  a:visited {
+    text-decoration: none !important; }
 
-Backtrace:
-style.scss:6
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:37:in `css_import?'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `call'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: responsive.\A         on line 6 of style.scss\A \A 1: $box-shadow: 1px 1px 50px rgba(166, 166, 166, 0.3);\A 2: $box-shadow-hover: 1px 1px 50px rgba(100, 100, 100, 0.4);\A 3: $thepurple: #6C63FF;\A 4: $max-width: 1024px;\A 5: \A 6: @import \"responsive\";\A 7: \A 8: // Mixin: Box Shadow\A 9: @mixin box-shadow($prop) {\A 10:   box-shadow: $prop;\A 11:   -o-box-shadow: $prop;"; }
+li {
+  list-style-type: none; }
+
+hr {
+  display: block;
+  width: 50%;
+  height: 1px;
+  border: 0;
+  border-top: 0.5px solid rgba(107, 99, 255, 0.3);
+  margin: 3em auto;
+  padding: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Serif Text', serif;
+  background-color: #f8f9fa; }
+
+.main-elements {
+  width: 100% !important;
+  display: block;
+  margin: 0;
+  text-align: center; }
+
+.header {
+  background-color: #6C63FF;
+  color: #f8f9fa;
+  height: 50px;
+  padding: 10px; }
+  .header .header-container {
+    max-width: 1024px;
+    height: 100%;
+    margin: auto; }
+    .header .header-container .logo {
+      width: 30px;
+      height: 30px;
+      border-radius: 20px;
+      float: left;
+      background-color: #f8f9fa;
+      color: #6C63FF; }
+    .header .header-container .contact {
+      width: 100px;
+      height: 30px;
+      border-radius: 15px;
+      float: right;
+      line-height: 30px;
+      background-color: #f8f9fa;
+      color: #6C63FF; }
+
+.body {
+  max-width: 1024px;
+  background-color: #f8f9fa;
+  color: #6C63FF;
+  margin: 0 auto;
+  display: block; }
+  .body .section h2 {
+    margin-bottom: 50px; }
+  .body .scroll-down {
+    width: 35px;
+    height: 35px;
+    border-radius: 18px;
+    color: #6C63FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+    box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.5);
+    -o-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.5);
+    -ms-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.5);
+    -moz-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.5);
+    -webkit-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.5); }
+  .body .section-one {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .body .section-one .sides {
+      width: 50%;
+      height: 100%;
+      float: left;
+      background-color: #f8f9fa; }
+    .body .section-one .illustration {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 75px; }
+      .body .section-one .illustration img {
+        width: 150px;
+        height: 150px; }
+    .body .section-one .introduction {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      padding-left: 75px; }
+      .body .section-one .introduction h2 {
+        font-weight: bolder;
+        margin: 0; }
+      .body .section-one .introduction h3 {
+        font-weight: bold; }
+  .body .section-two .thumbnails {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .body .section-two .thumbnails .thumbnail {
+      width: 250px;
+      height: 250px;
+      text-align: center;
+      color: #6C63FF; }
+      .body .section-two .thumbnails .thumbnail img {
+        width: 225px;
+        height: 200px; }
+  .body .section-three .skill {
+    width: 80%;
+    text-align: left;
+    margin: auto; }
+    .body .section-three .skill .progress-bar {
+      height: 15px;
+      border: 2px solid #6C63FF;
+      border-radius: 10px; }
+      .body .section-three .skill .progress-bar .progress {
+        height: 100%;
+        background-color: #6C63FF;
+        border-radius: 10px; }
+  .body .section-three .skill-one .progress {
+    width: 85%; }
+  .body .section-three .skill-two .progress {
+    width: 75%; }
+  .body .section-three .skill-three .progress {
+    width: 90%; }
+  .body .section-four .schools {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .body .section-four .schools .education {
+      width: 350px;
+      height: 150px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -o-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -ms-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -moz-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -webkit-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35); }
+      .body .section-four .schools .education .school-icon {
+        width: 150px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .body .section-four .schools .education .school-icon img {
+          width: 60%;
+          height: 60%; }
+      .body .section-four .schools .education .school-info {
+        width: 250px;
+        height: 150px;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: column; }
+        .body .section-four .schools .education .school-info > * {
+          display: flex;
+          justify-content: center;
+          flex-direction: column; }
+        .body .section-four .schools .education .school-info .name {
+          width: 100%;
+          height: 40%; }
+        .body .section-four .schools .education .school-info .years {
+          width: 100%;
+          height: 40%; }
+  .body .section-five .projects {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px; }
+    .body .section-five .projects .project {
+      width: 350px;
+      height: 150px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -o-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -ms-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -moz-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -webkit-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35); }
+      .body .section-five .projects .project .project-icon {
+        width: 150px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .body .section-five .projects .project .project-icon img {
+          width: 50%;
+          height: 50%; }
+      .body .section-five .projects .project .project-info {
+        width: 250px;
+        height: 150px;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: column; }
+        .body .section-five .projects .project .project-info > * {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          color: #6C63FF; }
+        .body .section-five .projects .project .project-info .name {
+          width: 100%;
+          height: 40%; }
+        .body .section-five .projects .project .project-info .description {
+          width: 100%;
+          height: 40%; }
+  .body .section-six {
+    min-width: 400px;
+    max-width: 50%;
+    height: 150px;
+    background-color: #6C63FF;
+    color: #f8f9fa;
+    border-radius: 10px;
+    margin: 0 auto 35px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+    -o-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+    -ms-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+    -moz-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+    -webkit-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35); }
+    .body .section-six a {
+      width: 120px;
+      height: 30px;
+      border-radius: 15px;
+      float: right;
+      line-height: 30px;
+      background-color: #f8f9fa;
+      color: #6C63FF;
+      box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -o-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -ms-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -moz-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35);
+      -webkit-box-shadow: 1px 1px 5px rgba(141, 141, 141, 0.35); }
+
+.education, .project {
+  background-color: #fff; }
+
+.footer {
+  height: 150px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #6C63FF;
+  color: #f8f9fa;
+  padding-top: 15px;
+  margin-bottom: 0px;
+  font-size: 13px; }
+  .footer .social .social-icons {
+    color: #f8f9fa;
+    margin: 0 10px; }
+
+@media only screen and (max-width: 920px) {
+  .body .section-two .thumbnails .thumbnail {
+    width: 150px;
+    height: auto; }
+    .body .section-two .thumbnails .thumbnail img {
+      width: 150px;
+      height: 150px; } }
+
+@media only screen and (max-width: 768px) {
+  hr {
+    width: 75%; }
+  .body .section-one .sides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; }
+  .body .section-two .thumbnails {
+    display: flex;
+    flex-direction: column; }
+    .body .section-two .thumbnails .thumbnail {
+      width: 100%;
+      height: auto;
+      margin: 0 auto 30px auto; }
+      .body .section-two .thumbnails .thumbnail img {
+        width: 40%;
+        height: auto; }
+  .body .section-four .schools {
+    display: flex;
+    flex-direction: column; }
+    .body .section-four .schools .education {
+      width: 75%;
+      min-width: 400px;
+      margin-bottom: 20px; }
+  .body .section-five .projects {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px; }
+    .body .section-five .projects .project {
+      width: 75%;
+      min-width: 400px;
+      margin-bottom: 20px; }
+  .body .section-six {
+    max-width: 75% !important; } }
+
+@media only screen and (max-width: 575px) {
+  .body .section-one {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column; }
+    .body .section-one .sides {
+      width: 100%; }
+    .body .section-one .illustration {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px 0 10px 0; }
+      .body .section-one .illustration img {
+        width: 100px;
+        height: 100px; }
+    .body .section-one .introduction {
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 25px 0 10px 0; }
+      .body .section-one .introduction h2 {
+        margin: 0; }
+      .body .section-one .introduction h3 {
+        margin: 0; } }
+
+@media only screen and (max-width: 415px) {
+  .body .section-four .schools .education {
+    min-width: 90%; }
+  .body .section-five .projects .project {
+    min-width: 90%; }
+  .body .section-six {
+    min-width: 90%;
+    max-width: 90%; } }
